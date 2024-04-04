@@ -28,6 +28,10 @@ def analyze_data(data):
             plt.xlabel(col)
             plt.ylabel('Frequency')
             plt.show()
+        print("Performing encoding")
+        data = pd.get_dummies(data)
+        print("Encoded Data:")
+        print(data)
         
         # Plot bar plot for the class label (string type)
         class_label_counts = data['Class'].value_counts()
